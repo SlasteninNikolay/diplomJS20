@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar popUp = function popUp() {\n  var headerModal = document.querySelector(\".header-modal\");\n  var overlay = document.querySelector(\".overlay\");\n\n  var handlerPopUp = function handlerPopUp(e) {\n    var target = e.target;\n\n    if (target.closest(\".btn-callback\")) {\n      headerModal.style.display = \"block\";\n      overlay.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n    }\n\n    if (target.matches(\".header-modal__close\")) {\n      headerModal.style.display = \"none\";\n      overlay.style.display = \"none\";\n      document.body.style.overflow = \"\";\n    }\n  };\n\n  document.body.addEventListener(\"click\", handlerPopUp);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popUp);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/popUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar popUp = function popUp() {\n  var headerModal = document.querySelector(\".header-modal\");\n  var overlay = document.querySelector(\".overlay\");\n\n  var handlerPopUp = function handlerPopUp(e) {\n    var target = e.target;\n    e.preventDefault();\n\n    if (target.closest(\".btn-callback\")) {\n      headerModal.style.display = \"block\";\n      overlay.style.display = \"block\";\n      document.body.style.overflow = \"hidden\";\n    }\n\n    if (target.matches(\".header-modal__close\")) {\n      headerModal.style.display = \"none\";\n      overlay.style.display = \"none\";\n      document.body.style.overflow = \"\";\n    }\n  };\n\n  document.body.addEventListener(\"click\", handlerPopUp);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popUp);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/popUp.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("eb063d86e558db6f4351")
+/******/ 		__webpack_require__.h = () => ("49b6a283f18f77103584")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -4,6 +4,7 @@ const popUp = () => {
 
     const handlerPopUp = (e) => {
         const target = e.target;
+        e.preventDefault();
         if (target.closest(".btn-callback")) {
             headerModal.style.display = "block";
             overlay.style.display = "block";
