@@ -93,7 +93,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {\n  console.log(\"slider\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar slider = function slider() {\n  var benefitsInner = document.querySelector(\".benefits-inner\");\n  var benefitsWrap = document.querySelector(\".benefits-wrap\");\n  var benefitsItems = document.querySelectorAll(\".benefits__item\");\n  var benefitsArrowLeft = document.querySelector(\".benefits__arrow--left\");\n  var benefitsArrowRight = document.querySelector(\".benefits__arrow--right\");\n  var position = 0;\n  var amountSlides = 3;\n  var infinity = true;\n\n  var addStyles = function addStyles() {\n    benefitsInner.style.cssText = \"overflow: hidden; \";\n    benefitsWrap.style.cssText = \"transition: transform 0.5s ease; will-change: transform !important\";\n    benefitsItems.forEach(function (item) {\n      item.style.cssText = \"flex: 0 0 \".concat(Math.floor(100 / amountSlides), \"% !important; margin: 0 auto !important\");\n    });\n  };\n\n  var checkResponse = function checkResponse() {\n    var widthWindow = document.documentElement.clientWidth;\n\n    if (widthWindow < 576) {\n      amountSlides = 1;\n      console.log(\"amountSlides: \", amountSlides);\n      addStyles();\n    } else {\n      amountSlides = 3;\n      console.log(\"amountSlides: \", amountSlides);\n      addStyles();\n    }\n  };\n\n  var prevSlide = function prevSlide() {\n    if (infinity || position > 0) {\n      --position;\n\n      if (position < 0) {\n        position = benefitsItems.length - amountSlides;\n      }\n\n      benefitsWrap.style.transform = \"translateX(-\".concat(position * Math.floor(100 / amountSlides), \"%)\");\n    }\n  };\n\n  var nextSlide = function nextSlide() {\n    if (infinity || position < benefitsItems.length - amountSlides) {\n      ++position;\n\n      if (position > benefitsItems.length - amountSlides) {\n        position = 0;\n      }\n\n      benefitsWrap.style.transform = \"translateX(-\".concat(position * Math.floor(100 / amountSlides), \"%)\");\n    }\n  };\n\n  addStyles();\n  checkResponse();\n  benefitsArrowLeft.addEventListener(\"click\", prevSlide);\n  benefitsArrowRight.addEventListener(\"click\", nextSlide);\n  window.addEventListener(\"resize\", checkResponse);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/slider.js?");
 
 /***/ }),
 
@@ -517,7 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("eb063d86e558db6f4351")
+/******/ 		__webpack_require__.h = () => ("cfee088707ba6e1f4943")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
