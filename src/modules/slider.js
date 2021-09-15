@@ -16,7 +16,7 @@ const slider = (main, wrap, slides, arrowPrev, arrowNext, amountSlides) => {
         wrapperItems.forEach((item) => {
             item.style.cssText = `flex: 0 0 ${Math.floor(
                 100 / slidesOnPage
-            )}% !important; margin: 0 auto !important`;
+            )}% !important; margin: 0 auto !important;`;
         });
     };
 
