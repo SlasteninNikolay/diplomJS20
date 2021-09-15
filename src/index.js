@@ -12,6 +12,21 @@ calculator();
 popUp();
 sedForm();
 showSertificate();
-slider();
+slider(
+    ".benefits-inner",
+    ".benefits-wrap",
+    ".benefits__item",
+    ".benefits__arrow--left",
+    ".benefits__arrow--right",
+    3
+);
+slider(
+    ".slider",
+    ".slider-wrapper",
+    ".slider-slide",
+    ".services__arrow--left",
+    ".services__arrow--right",
+    2
+);
 smoothScroll();
 timer();
