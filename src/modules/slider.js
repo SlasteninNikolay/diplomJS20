@@ -1,20 +1,21 @@
-const slider = () => {
-    const benefitsInner = document.querySelector(".benefits-inner");
-    const benefitsWrap = document.querySelector(".benefits-wrap");
-    const benefitsItems = document.querySelectorAll(".benefits__item");
-    const benefitsArrowLeft = document.querySelector(".benefits__arrow--left");
-    const benefitsArrowRight = document.querySelector(".benefits__arrow--right");
+const slider = (main, wrap, slides, arrowPrev, arrowNext, amountSlides) => {
+    const mainWrapper = document.querySelector(main);
+    const wrapper = document.querySelector(wrap);
+    const wrapperItems = document.querySelectorAll(slides);
+    const prev = document.querySelector(arrowPrev);
+    const next = document.querySelector(arrowNext);
+    let slidesOnPage = amountSlides;
+    const defSlidesOnPage = slidesOnPage;
 
     let position = 0;
-    let amountSlides = 3;
     const infinity = true;
 
     const addStyles = () => {
-        benefitsInner.style.cssText = `overflow: hidden; `;
-        benefitsWrap.style.cssText = `transition: transform 0.5s ease; will-change: transform !important`;
-        benefitsItems.forEach((item) => {
+        mainWrapper.style.cssText = `overflow: hidden;`;
+        wrapper.style.cssText = `transition: transform 0.5s ease; will-change: transform !important`;
+        wrapperItems.forEach((item) => {
             item.style.cssText = `flex: 0 0 ${Math.floor(
-                100 / amountSlides
+                100 / slidesOnPage
             )}% !important; margin: 0 auto !important`;
         });
     };
@@ -22,12 +23,10 @@ const slider = () => {
     const checkResponse = () => {
         const widthWindow = document.documentElement.clientWidth;
         if (widthWindow < 576) {
-            amountSlides = 1;
-            console.log("amountSlides: ", amountSlides);
+            slidesOnPage = 1;
             addStyles();
         } else {
-            amountSlides = 3;
-            console.log("amountSlides: ", amountSlides);
+            slidesOnPage = defSlidesOnPage;
             addStyles();
         }
     };
@@ -36,31 +35,27 @@ const slider = () => {
         if (infinity || position > 0) {
             --position;
             if (position < 0) {
-                position = benefitsItems.length - amountSlides;
+                position = wrapperItems.length - slidesOnPage;
             }
-            benefitsWrap.style.transform = `translateX(-${
-                position * Math.floor(100 / amountSlides)
-            }%)`;
+            wrapper.style.transform = `translateX(-${position * Math.floor(100 / slidesOnPage)}%)`;
         }
     };
 
     const nextSlide = () => {
-        if (infinity || position < benefitsItems.length - amountSlides) {
+        if (infinity || position < wrapperItems.length - slidesOnPage) {
             ++position;
-            if (position > benefitsItems.length - amountSlides) {
+            if (position > wrapperItems.length - slidesOnPage) {
                 position = 0;
             }
-            benefitsWrap.style.transform = `translateX(-${
-                position * Math.floor(100 / amountSlides)
-            }%)`;
+            wrapper.style.transform = `translateX(-${position * Math.floor(100 / slidesOnPage)}%)`;
         }
     };
 
     addStyles();
     checkResponse();
 
-    benefitsArrowLeft.addEventListener("click", prevSlide);
-    benefitsArrowRight.addEventListener("click", nextSlide);
+    prev.addEventListener("click", prevSlide);
+    next.addEventListener("click", nextSlide);
     window.addEventListener("resize", checkResponse);
 };
 
