@@ -20,5 +20,13 @@ slider(
     ".benefits__arrow--right",
     3
 );
+slider(
+    ".slider",
+    ".slider-wrapper",
+    ".slider-slide",
+    ".services__arrow--left",
+    ".services__arrow--right",
+    2
+);
 smoothScroll();
 timer();
