@@ -29,4 +29,4 @@ slider(
     2
 );
 smoothScroll();
-timer();
+timer("26 september 2021");
