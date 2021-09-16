@@ -11,8 +11,8 @@ const slider = (main, wrap, slides, arrowPrev, arrowNext, amountSlides) => {
     const infinity = true;
 
     const addStyles = () => {
-        mainWrapper.style.cssText = `overflow: hidden;`;
-        wrapper.style.cssText = `display: flex; transition: transform 0.5s ease; will-change: transform !important`;
+        mainWrapper.style.cssText = `overflow: hidden !important;`;
+        wrapper.style.cssText = `display: flex !important; transition: transform 0.5s ease !important; will-change: transform !important`;
         wrapperItems.forEach((item) => {
             item.style.cssText = `flex: 0 0 ${Math.floor(
                 100 / slidesOnPage
