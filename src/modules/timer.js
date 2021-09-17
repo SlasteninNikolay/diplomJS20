@@ -1,9 +1,9 @@
 const timer = (deadline) => {
-    const timerDays = document.querySelector(".count_1 span");
-    const timerHours = document.querySelector(".count_2 span");
+    const timerDays = document.querySelectorAll(".count_1 span");
+    const timerHours = document.querySelectorAll(".count_2 span");
     console.log("timerHours: ", timerHours);
-    const timerMinutes = document.querySelector(".count_3 span");
-    const timerSeconds = document.querySelector(".count_4 span");
+    const timerMinutes = document.querySelectorAll(".count_3 span");
+    const timerSeconds = document.querySelectorAll(".count_4 span");
     const idSetInterval = setInterval(updateClock, 1000);
 
     function getTimeRemaining() {
@@ -20,10 +20,18 @@ const timer = (deadline) => {
     function updateClock() {
         const timer = getTimeRemaining();
 
-        timerDays.textContent = timer.days <= 9 ? "0" + timer.days : timer.days;
-        timerHours.textContent = timer.hours <= 9 ? "0" + timer.hours : timer.hours;
-        timerMinutes.textContent = timer.minutes <= 9 ? "0" + timer.minutes : timer.minutes;
-        timerSeconds.textContent = timer.seconds <= 9 ? "0" + timer.seconds : timer.seconds;
+        timerDays.forEach((elem) => {
+            elem.textContent = timer.days <= 9 ? "0" + timer.days : timer.days;
+        });
+        timerHours.forEach((elem) => {
+            elem.textContent = timer.hours <= 9 ? "0" + timer.hours : timer.hours;
+        });
+        timerMinutes.forEach((elem) => {
+            elem.textContent = timer.minutes <= 9 ? "0" + timer.minutes : timer.minutes;
+        });
+        timerSeconds.forEach((elem) => {
+            elem.textContent = timer.seconds <= 9 ? "0" + timer.seconds : timer.seconds;
+        });
 
         if (timer.timerRemaining < 0) {
             timerDays.textContent = "00";
