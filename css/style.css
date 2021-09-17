@@ -772,16 +772,51 @@ p.services-image_mobile {
 .document-overlay {
     background: url("../images/zoom.png") no-repeat center rgba(79, 104, 110, 0.42);
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 280px;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
+    z-index: 2;
 }
-.document-inner:hover .document-overlay {
+.document-overlay:hover {
     opacity: 1;
     transition: opacity 0.3s linear;
     -webkit-transition: opacity 0.3s linear;
+}
+.document-modal {
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.document-modal__active {
+    height: 90vh;
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 99;
+}
+.document-modal__active img {
+    height: 90vh;
+}
+.document-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #4c686c;
+    color: #fff;
+}
+.document-close:hover {
+    background-color: #1a7c8b;
 }
 #contacts {
     background-color: #00902a;
@@ -1636,6 +1671,7 @@ input.error {
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.45);
+    z-index: 98;
 }
 
 .benefits-wrap {
