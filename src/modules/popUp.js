@@ -2,7 +2,6 @@ const popUp = () => {
     const headerModal = document.querySelector(".header-modal");
     const overlay = document.querySelector(".overlay");
     const servicesModal = document.querySelector(".services-modal");
-
     const handlerPopUp = (e) => {
         const target = e.target;
         if (target.closest(".btn-callback")) {
@@ -31,7 +30,6 @@ const popUp = () => {
             document.body.style.overflow = "";
         }
     };
-
     document.body.addEventListener("click", handlerPopUp);
 };
 
