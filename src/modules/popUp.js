@@ -5,24 +5,27 @@ const popUp = () => {
 
     const handlerPopUp = (e) => {
         const target = e.target;
-        e.preventDefault();
         if (target.closest(".btn-callback")) {
+            e.preventDefault();
             headerModal.style.display = "block";
             overlay.style.display = "block";
             document.body.style.overflow = "hidden";
         }
         if (target.matches(".header-modal__close")) {
+            e.preventDefault();
             headerModal.style.display = "none";
             overlay.style.display = "none";
             document.body.style.overflow = "";
         }
         if (target.closest(".service-button")) {
+            e.preventDefault();
             console.log(target);
             servicesModal.style.display = "block";
             overlay.style.display = "block";
             document.body.style.overflow = "hidden";
         }
         if (target.matches(".services-modal__close")) {
+            e.preventDefault();
             servicesModal.style.display = "none";
             overlay.style.display = "none";
             document.body.style.overflow = "";
