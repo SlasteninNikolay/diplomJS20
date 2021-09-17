@@ -1,6 +1,5 @@
 const sendForm = () => {
     const forms = document.querySelectorAll(".form-horizontal");
-    console.log("forms: ", forms);
     const statusMessage = document.createElement("dir");
     const loadMessage = "Отправка данных...";
     const successMessage = "Спасибо! Ваша заявка принята.";
