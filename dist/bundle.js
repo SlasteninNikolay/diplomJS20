@@ -517,11 +517,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("8d6d21f6b48f1702ccee")
-=======
 /******/ 		__webpack_require__.h = () => ("fbf3d61ef0455b42d617")
->>>>>>> showSerticate
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
