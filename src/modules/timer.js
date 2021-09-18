@@ -1,7 +1,6 @@
 const timer = (deadline) => {
     const timerDays = document.querySelectorAll(".count_1 span");
     const timerHours = document.querySelectorAll(".count_2 span");
-    console.log("timerHours: ", timerHours);
     const timerMinutes = document.querySelectorAll(".count_3 span");
     const timerSeconds = document.querySelectorAll(".count_4 span");
     const idSetInterval = setInterval(updateClock, 1000);

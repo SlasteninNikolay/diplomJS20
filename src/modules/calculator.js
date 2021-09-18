@@ -1,7 +1,6 @@
 const calculator = () => {
     const calcSection = document.getElementById("calc");
     const calcTotal = document.getElementById("calc-total");
-    console.log("calcTotal: ", calcTotal);
 
     if (calcSection) {
         let calcTypeValue;
