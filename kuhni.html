@@ -271,8 +271,9 @@
           <div class="heading-image"><i class="service-ico"></i></div>
           <h2 class="heading white">Наши <span>услуги</span></h2>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-6">
+        <div class="slider">
+          <div class="row slider-wrapper">
+          <div class="col-md-12 col-lg-6 slider-slide">
             <div class="service-block">
               <div class="service-image">
                 <img src="images/services/9.jpg" alt="" />
@@ -355,7 +356,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-md-12 col-lg-6 slider-slide">
             <div class="service-block">
               <div class="service-image">
                 <img src="images/services/10.jpg" alt="" />
@@ -480,7 +481,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-md-12 col-lg-6 slider-slide">
             <div class="service-block">
               <div class="service-image">
                 <img src="images/services/11.jpg" alt="" />
@@ -539,7 +540,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-md-12 col-lg-6 slider-slide">
             <div class="service-block">
               <div class="service-image">
                 <img src="images/services/12.jpg" alt="" />
@@ -586,13 +587,14 @@
               </div>
             </div>
           </div>
-          <div class="services-arrows">
-            <div class="services__arrow services__arrow--left">
-              <img src="images/benefits/left-arrow.svg" alt="" />
-            </div>
-            <div class="services__arrow services__arrow--right">
-              <img src="images/benefits/right-arrow.svg" alt="" />
-            </div>
+        </div>
+        </div>
+        <div class="services-arrows">
+          <div class="services__arrow services__arrow--left">
+            <img src="images/benefits/left-arrow.svg" alt="" />
+          </div>
+          <div class="services__arrow services__arrow--right">
+            <img src="images/benefits/right-arrow.svg" alt="" />
           </div>
         </div>
       </div>
@@ -629,7 +631,7 @@
                       <input
                         type="text"
                         name="fio"
-                        class="form-control required"
+                        class="form-control form-name required"
                         placeholder="ваше имя"
                       />
                     </div>
@@ -639,7 +641,7 @@
                       <input
                         type="text"
                         name="phone"
-                        class="form-control required"
+                        class="form-control form-phone required"
                         placeholder="ваш телефон"
                         data-mask="+7 (999) 999-99-99"
                       />
@@ -911,7 +913,7 @@
                       <input
                         type="text"
                         name="fio"
-                        class="form-control required"
+                        class="form-control form-name required"
                         placeholder="ваше имя"
                       />
                     </div>
@@ -921,7 +923,7 @@
                       <input
                         type="text"
                         name="phone"
-                        class="form-control required"
+                        class="form-control form-phone required"
                         placeholder="ваш телефон"
                         data-mask="+7 (999) 999-99-99"
                       />
@@ -1080,12 +1082,12 @@
           Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и
           ответим на все вопросы!
         </p>
-        <form name="callback-form">
+        <form class="callback-form" name="callback-form">
           <div class="form-group">
             <input
               type="text"
               name="fio"
-              class="form-control required"
+              class="form-control form-name required"
               placeholder="Ваше имя*"
             />
           </div>
@@ -1093,7 +1095,7 @@
             <input
               type="text"
               name="phone"
-              class="form-control required"
+              class="form-control form-phone required"
               placeholder="Контактный телефон*"
               data-mask="+7 (999) 999-99-99"
             />
@@ -1133,7 +1135,7 @@
             <input
               type="text"
               name="fio"
-              class="form-control required"
+              class="form-control form-name required"
               placeholder="Ваше имя*"
             />
           </div>
@@ -1141,7 +1143,7 @@
             <input
               type="text"
               name="phone"
-              class="form-control required"
+              class="form-control form-phone required"
               placeholder="Контактный телефон*"
               data-mask="+7 (999) 999-99-99"
             />
@@ -1173,12 +1175,12 @@
         <p class="text-center">
           Оставьте заявку и специалист свяжется с Вами в ближайшее время!
         </p>
-        <form name="application-form">
+        <form class="application-form" name="application-form">
           <div class="form-group">
             <input
               type="text"
               name="fio"
-              class="form-control required"
+              class="form-control form-name required"
               placeholder="Ваше имя*"
             />
           </div>
@@ -1186,7 +1188,7 @@
             <input
               type="text"
               name="phone"
-              class="form-control required"
+              class="form-control form-phone required"
               placeholder="Контактный телефон*"
               data-mask="+7 (999) 999-99-99"
             />
@@ -1231,12 +1233,12 @@
         </div>
         <div class="box-modal_body rf">
             <p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и ответим на все вопросы!</p>
-            <form name="callback-form">
+            <form class="callback-form" name="callback-form">
                 <div class="form-group">
-                    <input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+                    <input type="text" name="fio" class="form-control form-name required" placeholder="Ваше имя*">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+                    <input type="text" name="phone" class="form-control form-phone required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
                     <div class="text-center"><button type="submit" class="btn btn-warning feedback">Свяжитесь со мной!</button></div>
@@ -1257,12 +1259,12 @@
 			</div>
 			<div class="box-modal_body rf">
 				<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-				<form name="application-form">
+				<form class="application-form" name="application-form">
 					<div class="form-group">
-						<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
+						<input type="text" name="fio" class="form-control form-name required" placeholder="Ваше имя*">
 					</div>
 					<div class="form-group">
-						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
+						<input type="text" name="phone" class="form-control form-phone required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
 					</div>
 					<div class="form-action">
 						<div class="text-center"><button type="submit" class="btn btn-success feedback">Вызвать замерщика!</button></div>
@@ -1279,6 +1281,7 @@
 	<div class="smooth-scroll">
 		<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">
 	</div>
+  <div class="document-modal"><img><button class="document-close" type="button">x</button></div>
 
 
   </body>
