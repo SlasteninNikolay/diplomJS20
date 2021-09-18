@@ -1,6 +1,6 @@
 const sendForm = () => {
-    const forms = document.querySelectorAll(".form-horizontal");
-    const statusMessage = document.createElement("dir");
+    const forms = document.querySelectorAll(".form-horizontal, .callback-form, .application-form");
+    const statusMessage = document.createElement("div");
     const loadMessage = "Отправка данных...";
     const successMessage = "Спасибо! Ваша заявка принята.";
     const errorMessage = "Что-то пошло не так...";
@@ -8,7 +8,9 @@ const sendForm = () => {
     statusMessage.style.cssText = "text-align: center; color: rgb(0, 144, 42);";
 
     const clearData = () => {
-        const forms = document.querySelectorAll(".form-horizontal");
+        const forms = document.querySelectorAll(
+            ".form-horizontal, .callback-form, .application-form"
+        );
 
         forms.forEach((form) => {
             [...form.elements].forEach((element) => {
