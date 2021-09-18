@@ -3,6 +3,7 @@
 import calculator from "./modules/calculator";
 import popUp from "./modules/popUp";
 import sendForm from "./modules/sendForm";
+import validate from "./modules/validate";
 import showSertificate from "./modules/showSertificate";
 import slider from "./modules/slider";
 import smoothScroll from "./modules/smoothScroll";
@@ -11,6 +12,7 @@ import timer from "./modules/timer";
 calculator();
 popUp();
 sendForm();
+validate();
 showSertificate();
 slider(
     ".benefits-inner",
