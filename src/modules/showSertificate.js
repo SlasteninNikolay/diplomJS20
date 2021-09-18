@@ -19,10 +19,6 @@ const showSertificate = () => {
         overlay.style.display = "none";
         documentModal.classList.toggle("document-modal__active");
     });
-    overlay.addEventListener("click", () => {
-        overlay.style.display = "none";
-        documentModal.classList.toggle("document-modal__active");
-    });
 };
 
 export default showSertificate;
