@@ -1756,10 +1756,16 @@ input.error {
 }
 
 .smooth-scroll {
+    opacity: 0;
     position: fixed;
     right: 25px;
     bottom: 25px;
     transform: rotate(90deg);
+    transition: opacity 0.3s;
+    will-change: opacity;
+}
+.smooth-scroll__active {
+    opacity: 1;
 }
 
 @media (min-width: 576px) {
