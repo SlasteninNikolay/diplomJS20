@@ -104,7 +104,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  console.log(\"smoothScroll\");\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/smoothScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  var scrollBtn = document.querySelector(\".smooth-scroll\");\n  var secondSection = document.getElementById(\"benefits\");\n  window.addEventListener(\"scroll\", function () {\n    if (window.pageYOffset > secondSection.offsetTop) {\n      scrollBtn.classList.add(\"smooth-scroll__active\");\n    } else {\n      scrollBtn.classList.remove(\"smooth-scroll__active\");\n    }\n  });\n  scrollBtn.addEventListener(\"click\", function (e) {\n    e.preventDefault();\n    window.scrollTo({\n      top: 0,\n      behavior: \"smooth\"\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/smoothScroll.js?");
 
 /***/ }),
 
@@ -528,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("7037f4070419736a0a98")
+/******/ 		__webpack_require__.h = () => ("c6f8634b064752f5fc4f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
