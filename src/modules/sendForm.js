@@ -45,6 +45,8 @@ const sendForm = () => {
             formData.forEach((val, key) => {
                 body[key] = val;
             });
+            const total = localStorage.getItem("Итого");
+            body["Итого"] = total;
             postData(body)
                 .then((response) => {
                     if (response.status !== 200) {
