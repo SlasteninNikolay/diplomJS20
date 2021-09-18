@@ -82,7 +82,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar showSertificate = function showSertificate() {\n  var documents = document.querySelector(\"#documents\");\n  var overlay = document.querySelector(\".overlay\");\n  var documentModal = document.querySelector(\".document-modal\");\n  var img = document.querySelector(\".document-modal img\");\n  var documentClose = document.querySelector(\".document-close\");\n  documents.addEventListener(\"click\", function (event) {\n    var target = event.target;\n\n    if (target.matches(\".document-overlay\")) {\n      event.preventDefault();\n      overlay.style.display = \"block\";\n      var link = target.closest(\"a\").getAttribute(\"href\");\n      img.setAttribute(\"src\", link);\n      documentModal.classList.toggle(\"document-modal__active\");\n    }\n  });\n  documentClose.addEventListener(\"click\", function () {\n    overlay.style.display = \"none\";\n    documentModal.classList.toggle(\"document-modal__active\");\n  });\n  overlay.addEventListener(\"click\", function () {\n    overlay.style.display = \"none\";\n    documentModal.classList.toggle(\"document-modal__active\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showSertificate);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/showSertificate.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar showSertificate = function showSertificate() {\n  var documents = document.querySelector(\"#documents\");\n  var overlay = document.querySelector(\".overlay\");\n  var documentModal = document.querySelector(\".document-modal\");\n  var img = document.querySelector(\".document-modal img\");\n  var documentClose = document.querySelector(\".document-close\");\n  documents.addEventListener(\"click\", function (event) {\n    var target = event.target;\n\n    if (target.matches(\".document-overlay\")) {\n      event.preventDefault();\n      overlay.style.display = \"block\";\n      var link = target.closest(\"a\").getAttribute(\"href\");\n      img.setAttribute(\"src\", link);\n      documentModal.classList.toggle(\"document-modal__active\");\n    }\n  });\n  documentClose.addEventListener(\"click\", function () {\n    overlay.style.display = \"none\";\n    documentModal.classList.toggle(\"document-modal__active\");\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showSertificate);\n\n//# sourceURL=webpack://diplomjs20/./src/modules/showSertificate.js?");
 
 /***/ }),
 
@@ -528,7 +528,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("0bded7b1f3e8c7d0098f")
+/******/ 		__webpack_require__.h = () => ("c00a8310aa72409b535a")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
