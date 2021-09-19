@@ -1,7 +1,7 @@
 const validate = () => {
     const pattern = {
         phone: /^\+?[78]\d{10}$/,
-        name: /^[а-яёa-z\s?]+$/i,
+        name: /^[а-яёa-z\s?]{2,}$/i,
         message: /^[а-яё\s\-]+$/i,
         email: /^[\w\-\.!~\*`]+@[\w\-\.!~\*`]+\.\w{2,}$/,
     };
